@@ -26,5 +26,5 @@ class CVecteur3D
 		const float getZ();
 		bool CoinciderVecteur(const CVecteur3D Vecteur) const;
 		bool CoinciderVecteur(const CVecteur3D *pVecteur) const;
-		bool CoinciderVecteur(const CVecteur3D &rVecteur) const;
+		bool CoinciderVecteurRef(const CVecteur3D &rVecteur) const;
 };

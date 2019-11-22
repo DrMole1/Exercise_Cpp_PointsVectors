@@ -75,19 +75,33 @@ float const CVecteur3D::getZ()
 	return m_fltZ;
 }
 
+
+// BUT : Méthode pour voir si deux vecteurs sont identiques
+// ENTREES : Un autre vecteur
+// SORTIES : Un booléen
 bool CVecteur3D::CoinciderVecteur(const CVecteur3D Vecteur) const
 {
-	return false;
+	return ((Vecteur.m_fltX == this->m_fltX) && (Vecteur.m_fltY == this->m_fltY) && (Vecteur.m_fltZ == this->m_fltZ));
 }
 
+
+// BUT : Méthode pour voir si deux vecteurs sont identiques
+// ENTREES : Un autre vecteur
+// SORTIES : Un booléen
+// NOTE : Passage par adresse
 bool CVecteur3D::CoinciderVecteur(const CVecteur3D * pVecteur) const
 {
-	return false;
+	return ((pVecteur->m_fltX == this->m_fltX) && (pVecteur->m_fltY == this->m_fltY) && (pVecteur->m_fltZ == this->m_fltZ));
 }
 
-bool CVecteur3D::CoinciderVecteur(const CVecteur3D & rVecteur) const
+
+// BUT : Méthode pour voir si deux vecteurs sont identiques
+// ENTREES : Un autre vecteur
+// SORTIES : Un booléen
+// NOTE : Passage par référence
+bool CVecteur3D::CoinciderVecteurRef(const CVecteur3D & rVecteur) const
 {
-	return false;
+	return ((rVecteur.m_fltX == this->m_fltX) && (rVecteur.m_fltY == this->m_fltY) && (rVecteur.m_fltZ == this->m_fltZ));
 }
 
 //=================================================================================
