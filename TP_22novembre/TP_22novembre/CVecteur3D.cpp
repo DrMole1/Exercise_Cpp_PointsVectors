@@ -75,4 +75,19 @@ float const CVecteur3D::getZ()
 	return m_fltZ;
 }
 
+bool CVecteur3D::CoinciderVecteur(const CVecteur3D Vecteur) const
+{
+	return false;
+}
+
+bool CVecteur3D::CoinciderVecteur(const CVecteur3D * pVecteur) const
+{
+	return false;
+}
+
+bool CVecteur3D::CoinciderVecteur(const CVecteur3D & rVecteur) const
+{
+	return false;
+}
+
 //=================================================================================

@@ -17,12 +17,13 @@ int main()
 
 	//Construction des instances des vecteurs
 
-	CVecteur3D vecteur1();
+	CVecteur3D vecteur1 = CVecteur3D();
 	CVecteur3D vecteur2(fltX, fltY, fltZ);
 	CVecteur3D vecteur3(fltValeur);
 	//================================
 
 	//Affichage
+	cout << "Vecteur 1 : " << vecteur1.getX() << ", " << vecteur1.getY() << ", " << vecteur1.getZ() << endl;
 	cout << "Vecteur 2 : " << vecteur2.getX() << ", " << vecteur2.getY() << ", " << vecteur2.getZ() << endl;
 	cout << "Vecteur 3 : " << vecteur3.getX() << ", " << vecteur3.getY() << ", " << vecteur3.getZ() << endl;
 

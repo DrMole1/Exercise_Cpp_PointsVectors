@@ -24,4 +24,7 @@ class CVecteur3D
 		const float getX();
 		const float getY();
 		const float getZ();
+		bool CoinciderVecteur(const CVecteur3D Vecteur) const;
+		bool CoinciderVecteur(const CVecteur3D *pVecteur) const;
+		bool CoinciderVecteur(const CVecteur3D &rVecteur) const;
 };
