@@ -8,6 +8,7 @@
 
 
 #include "CVecteur3D.h"
+#include <cmath>
 
 
 //==================================================================================
@@ -75,6 +76,7 @@ float const CVecteur3D::getZ()
 	return m_fltZ;
 }
 
+//=================================================================================
 
 // BUT : Méthode pour voir si deux vecteurs sont identiques
 // ENTREES : Un autre vecteur
@@ -104,4 +106,50 @@ bool CVecteur3D::CoinciderVecteurRef(const CVecteur3D & rVecteur) const
 	return ((rVecteur.m_fltX == this->m_fltX) && (rVecteur.m_fltY == this->m_fltY) && (rVecteur.m_fltZ == this->m_fltZ));
 }
 
-//=================================================================================
+
+
+// BUT : Méthode pour voir si deux vecteurs sont identiques
+// ENTREES : Un autre vecteur
+// SORTIES : Un booléen
+CVecteur3D CVecteur3D::Normax(CVecteur3D Vecteur)
+{
+	float normeTemp = 0.0f;
+	normeTemp = sqrt(pow(this->m_fltX, 2) + pow(this->m_fltY, 2) + pow(this->m_fltZ, 2));
+	if (normeTemp < sqrt(pow(Vecteur.m_fltX, 2) + pow(Vecteur.m_fltY, 2) + pow(Vecteur.m_fltZ, 2)))
+	{
+		return Vecteur;
+	}
+	return *this;
+}
+
+
+// BUT : Méthode pour voir si deux vecteurs sont identiques
+// ENTREES : Un autre vecteur
+// SORTIES : Un booléen
+// NOTE : Passage par adresse
+CVecteur3D * CVecteur3D::Normax(CVecteur3D * pVecteur)
+{
+	float normeTemp = 0.0f;
+	normeTemp = sqrt(pow(this->m_fltX, 2) + pow(this->m_fltY, 2) + pow(this->m_fltZ, 2));
+	if (normeTemp < sqrt(pow(pVecteur->m_fltX, 2) + pow(pVecteur->m_fltY, 2) + pow(pVecteur->m_fltZ, 2)))
+	{
+		return pVecteur;
+	}
+	return this;
+}
+
+
+// BUT : Méthode pour voir si deux vecteurs sont identiques
+// ENTREES : Un autre vecteur
+// SORTIES : Un booléen
+// NOTE : Passage par référence
+CVecteur3D & CVecteur3D::NormaxRef(CVecteur3D & rVecteur)
+{
+	float normeTemp = 0.0f;
+	normeTemp = sqrt(pow(this->m_fltX, 2) + pow(this->m_fltY, 2) + pow(this->m_fltZ, 2));
+	if (normeTemp < sqrt(pow(rVecteur.m_fltX, 2) + pow(rVecteur.m_fltY, 2) + pow(rVecteur.m_fltZ, 2)))
+	{
+		return rVecteur;
+	}
+	return *this;
+}

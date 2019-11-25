@@ -27,4 +27,7 @@ class CVecteur3D
 		bool CoinciderVecteur(const CVecteur3D Vecteur) const;
 		bool CoinciderVecteur(const CVecteur3D *pVecteur) const;
 		bool CoinciderVecteurRef(const CVecteur3D &rVecteur) const;
+		CVecteur3D Normax(CVecteur3D Vecteur);
+		CVecteur3D *Normax(CVecteur3D *pVecteur);
+		CVecteur3D &NormaxRef(CVecteur3D &rVecteur);
 };
