@@ -2,6 +2,7 @@
 #include <cmath>
 #include <cstdlib>
 #include "CVecteur3D.h"
+#include "CPoint.h"
 
 using namespace std;
 
@@ -47,6 +48,7 @@ int main()
 	cout << "Methode de comparaison de normes par ref, doit retourner 5.0 : " << vecteur2.Normax(vecteur3).getZ() << endl;
 	*/
 
+	/*
 	//Exercice 4 : Constructeur Valeur par défaut, Afficher, Somme et Produit Scalaire
 	//
 	//Construction des instances des vecteurs
@@ -62,6 +64,23 @@ int main()
 	cout << "Somme de vecteurs : valeur Y (2+4): " << vecteur2.SommeVecteur(vecteur3).getY() << endl;
 	cout << "Somme de vecteurs : valeur Z (5+4): " << vecteur2.SommeVecteur(vecteur3).getZ() << endl;
 	cout << "Produit scalaire : 9*4 + 2*4 + 5*4 : " << vecteur2.ProduitScalaire(vecteur3) << endl;
+	*/
+
+	//Exercice 5 : comptage de points
+
+	//Construction du premier point puis affichage du compteur
+	CPoint point1 = CPoint();
+	cout << "Nombre de points : " << CPoint::compte() << endl;
+
+	//Construction du second point puis affichage du compteur
+	CPoint point2 = CPoint();
+	cout << "Nombre de points : " << CPoint::compte() << endl;
+
+	//Construction du troisième point puis affichage du compteur
+	CPoint point3 = CPoint();
+	cout << "Nombre de points : " << CPoint::compte() << endl;
+
+
 
 	system("pause");
 	return 0;
