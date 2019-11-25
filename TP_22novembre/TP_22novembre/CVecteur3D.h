@@ -6,6 +6,7 @@
 
 // Auteur : Prob Bastien
 // 22/11/2019 : Date de création
+// 25/11/2019 : Ajout des méthodes Afficher, Somme et ProduitScalaire
 //================================================
 
 #pragma once
@@ -24,10 +25,13 @@ class CVecteur3D
 		const float getX();
 		const float getY();
 		const float getZ();
-		bool CoinciderVecteur(const CVecteur3D Vecteur) const;
+		/*bool CoinciderVecteur(const CVecteur3D Vecteur) const;
 		bool CoinciderVecteur(const CVecteur3D *pVecteur) const;
 		bool CoinciderVecteurRef(const CVecteur3D &rVecteur) const;
 		CVecteur3D Normax(CVecteur3D Vecteur);
 		CVecteur3D *Normax(CVecteur3D *pVecteur);
-		CVecteur3D &NormaxRef(CVecteur3D &rVecteur);
+		CVecteur3D &NormaxRef(CVecteur3D &rVecteur);*/
+		const void Affichage();
+		CVecteur3D SommeVecteur(const CVecteur3D vecteur);
+		float ProduitScalaire(const CVecteur3D vecteur);
 };

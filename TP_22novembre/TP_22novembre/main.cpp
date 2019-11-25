@@ -14,12 +14,6 @@ int main()
 	float fltY = 2.0;
 	float fltZ = 5.0;
 	float fltValeur = 4.0;
-
-	//Construction des instances des vecteurs
-
-	CVecteur3D vecteur1 = CVecteur3D();
-	CVecteur3D vecteur2(fltX, fltY, fltZ);
-	CVecteur3D vecteur3(fltValeur);
 	//================================
 
 	//Affichage des données carthésiennes
@@ -40,6 +34,7 @@ int main()
 	cout << "Methode de coincidence 3 (ref), doit retourner vrai : " << vecteur2.CoinciderVecteurRef(vecteur4) << endl;
 	*/
 
+	/*
 	//Affichage des normes les plus grandes
 	cout << "Methode de comparaison de normes, doit retourner 9.0 : " << vecteur2.Normax(vecteur3).getX() << endl;
 	cout << "Methode de comparaison de normes, doit retourner 2.0 : " << vecteur2.Normax(vecteur3).getY() << endl;
@@ -50,6 +45,23 @@ int main()
 	cout << "Methode de comparaison de normes par ref, doit retourner 9.0 : " << vecteur2.Normax(vecteur3).getX() << endl;
 	cout << "Methode de comparaison de normes par ref, doit retourner 2.0 : " << vecteur2.Normax(vecteur3).getY() << endl;
 	cout << "Methode de comparaison de normes par ref, doit retourner 5.0 : " << vecteur2.Normax(vecteur3).getZ() << endl;
+	*/
+
+	//Exercice 4 : Constructeur Valeur par défaut, Afficher, Somme et Produit Scalaire
+	//
+	//Construction des instances des vecteurs
+	//=========================================
+	CVecteur3D vecteur1 = CVecteur3D();
+	CVecteur3D vecteur2(fltX, fltY, fltZ);
+	CVecteur3D vecteur3(fltValeur);
+	//=========================================
+	vecteur1.Affichage();
+	vecteur2.Affichage();
+	vecteur3.Affichage();
+	cout << "Somme de vecteurs : valeur X (9+4): " << vecteur2.SommeVecteur(vecteur3).getX() << endl;
+	cout << "Somme de vecteurs : valeur Y (2+4): " << vecteur2.SommeVecteur(vecteur3).getY() << endl;
+	cout << "Somme de vecteurs : valeur Z (5+4): " << vecteur2.SommeVecteur(vecteur3).getZ() << endl;
+	cout << "Produit scalaire : 9*4 + 2*4 + 5*4 : " << vecteur2.ProduitScalaire(vecteur3) << endl;
 
 	system("pause");
 	return 0;

@@ -4,11 +4,16 @@
 
 // Auteur : Prob Bastien
 // 22/11/2019 : Date de création
+// 25/11/2019 : Ajout des méthodes Afficher, Somme et ProduitScalaire
 //==========================================
 
 
 #include "CVecteur3D.h"
 #include <cmath>
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
 
 
 //==================================================================================
@@ -76,8 +81,41 @@ float const CVecteur3D::getZ()
 	return m_fltZ;
 }
 
-//=================================================================================
 
+// BUT : Afficher les attributs membres de l'instance
+// ENTREES : /
+// SORTIES : Les valeurs X Y et Z
+const void CVecteur3D::Affichage()
+{
+	cout << " X : " << m_fltX << ", Y : " << m_fltY << ", Z : " << m_fltZ << endl;
+}
+
+
+// BUT : Calculer la somme de deux vecteurs
+// ENTREES : Un autre vecteur
+// SORTIES : La somme du vecteur, de type vecteur, par relation de Chasles
+CVecteur3D CVecteur3D::SommeVecteur(const CVecteur3D vecteur)
+{
+	CVecteur3D vecteurTemp;
+	vecteurTemp.m_fltX = this->m_fltX + vecteur.m_fltX;
+	vecteurTemp.m_fltY = this->m_fltY + vecteur.m_fltY;
+	vecteurTemp.m_fltZ = this->m_fltZ + vecteur.m_fltZ;
+	return vecteurTemp;
+}
+
+
+// BUT : Calculer le produit scalaire de 2 vecteurs
+// ENTREES : Un autre vecteur
+// SORTIES : Un Float, produit scalaire
+float CVecteur3D::ProduitScalaire(const CVecteur3D vecteur)
+{
+	return ((this->m_fltX * vecteur.m_fltX) + (this->m_fltY * vecteur.m_fltY) + (this->m_fltZ * vecteur.m_fltZ));
+}
+
+
+
+//=================================================================================
+/*
 // BUT : Méthode pour voir si deux vecteurs sont identiques
 // ENTREES : Un autre vecteur
 // SORTIES : Un booléen
@@ -153,3 +191,4 @@ CVecteur3D & CVecteur3D::NormaxRef(CVecteur3D & rVecteur)
 	}
 	return *this;
 }
+*/
